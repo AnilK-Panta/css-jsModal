@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Modal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="randomBtn" id="randomBtn">Click here</div>
+    <div class="sendVehicleForMaintainanceModal" id="sendVehicleForMaintainanceModal">
+        <div class="sendVehicleForMaintainanceModalMain">
+            <div class="sendVehicleForMaintainanceModalNav">
+                <div class="sendVehicleForMaintainanceNavTitle">
+                    <h1>Send Vehicle to Maintenance</h1>
+                </div>
+            </div>
+            <div class="sendVehicleForMaintainanceModalFields">
+                <div class="sendVehicleForMaintainanceModalBrand">
+                    <span>Brand:</span>
+                    <div class="sendVehicleForMaintainanceModalBrandName">Hyundai</div>
+                </div>
+                <div class="sendVehicleForMaintainanceModalReason">
+                    <span>Reason:</span>
+                    <div class="sendVehicleForMaintainanceModalReasonField">
+                        <textarea name="" id="sendVehicleForMaintainanceModalReasonField" cols="30"
+                            rows="10"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="sendVehicleForMaintainanceModalBtn">
+                <div class="sendVehicleForMaintainanceModalBtnSend">
+                    <h1>Send</h1>
+                </div>
+                <!-- <div class="vehicleDetailModalCancle">
+                        <h1>Cancle</h1>
+                    </div> -->
+            </div>
+        </div>
+    </div>
+    <script>
+        var modal = document.getElementById("sendVehicleForMaintainanceModal");
+
+        var btn = document.getElementById("randomBtn");
+
+        btn.onclick = function () {
+            modal.style.display = "flex";
+        };
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+</body>
+
+</html>
